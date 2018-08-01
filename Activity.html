@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Activity2</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	  <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+
+<style>
+	button{
+		width: 50px;
+		height: 50px;
+		margin-bottom: 10px;
+	}
+	#display{
+		width: 214px;
+		height: 50px;
+		margin-bottom: 10px;
+		color: white;	
+	}
+	#display2{
+		width: 214px;
+		height: 50px;
+		margin-bottom: 10px;
+		color: white;	
+	}
+</style>
+</head>
+<body>
+<div id="display2" style="background-color: #808099"></div>
+<div id="display"></div>
+
+<button class="numberBtn">7</button>
+<button class="numberBtn">8</button>
+<button class="numberBtn">9</button>
+<button class="operatorBtn" style='background-color: orange;'>+</button><br>
+<button class="numberBtn">4</button>
+<button class="numberBtn">5</button>
+<button class="numberBtn">6</button>
+<button class="operatorBtn" style='background-color: orange;'>-</button><br>
+<button class="numberBtn">1</button>
+<button class="numberBtn">2</button>
+<button class="numberBtn">3</button>
+<button class="operatorBtn" style='background-color: orange;'>x</button><br>
+<button class="numberBtn">.</button>
+<button class="numberBtn">0</button>
+<button id="calculate" style='background-color: #002070;'>=</button>
+<button class="operatorBtn" style='background-color: orange;'>/</button>
+
+<script type="text/javascript">
+let result=0;
+let num1=0;
+let num2=0;
+let operator='';
+const history=document.getElementById('display2');
+const display=document.getElementById('display');
+
+// const numberBtns=document.getElementsByClassName('numberBtn');
+// for (numberBtn of numberBtns){
+//  numberBtn.onclick=function(){
+// const num=this.innerHTML;
+//display.innerHTML+=num;	
+	// document.getElementById('display2').innerHTML=display2
+// }
+// }
+	const numberBtns= $('.numberBtn').click( function(){
+	const num=$(this).html();
+	$('#display').html($('#display').html()+num);
+	// $('#display').append(num);
+	});
+
+	$('.operatorBtn').click( function(){
+	num1= display.html();
+	operator=$(this).html();
+	if(num=='x'){
+		operator='*';
+	}
+	else{
+		operator=num;
+	}
+	history.html(num1+operator);
+	display.html('');
+});
+	$('#calculate').click( ()=>{
+	num2=$('#display').html();
+	$('#display2').append(num2);
+	$('#display').html(eval(num1+operator+num2));
+	});
+// $('#division').click( ()=>{
+// 	num1= display.html();
+// 	operator= '/';
+// 	history.html(num1+operator);
+// 	display.html('');
+// }
+
+</script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- <script src="assets/js/jquery-3.3.1.min.js"></script> -->
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

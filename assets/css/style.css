@@ -1,0 +1,9 @@
+*{
+	background-color: #808080;
+}
+.button{
+	height: 30px;
+	width: 200px;
+	border: 1px solid black;
+	margin-top: 5px;
+}
