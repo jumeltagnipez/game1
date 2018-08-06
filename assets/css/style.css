@@ -1,6 +1,6 @@
 
 *{
-    background-image: url(../images/background.jpg);
+    background-image: url(../css/background.jpg);
 /*    background-size: cover;
     height: 100vh;
     display: flex;
@@ -15,7 +15,7 @@ img{
     transform: translate(1900%, 1200%);
     }
 .game2{
-	background-image: url(../images/water.jpg);
+	background-image: url(../css/water.jpg);
 }
 .circle{
 	height: 100px;
