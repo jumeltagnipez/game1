@@ -1,0 +1,41 @@
+
+.game2{
+	background-image: url(../images/water.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 130vh;
+    float: left;
+}
+
+.box{
+	height: 130px;
+	width: 500px;
+	/*border: 5px solid black;*/
+}
+img{
+	height: 130px;
+	width: 90px;
+}
+
+/*Desktop devices (landscape phones, less than 1200px)*/
+@media (max-width: 1399.98px) {
+body{
+	float: left;
+	height: auto;
+	width: 94%;
+}
+
+/*Tablet Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+
+body{
+	float: left;
+	height: 100vh;
+	width: 100%;
+}
